@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from "react";
+import { styles } from "./components/global.style";
+import { Text, View, FlatList } from "react-native";
+import ProductList from "./components/ProductList";
+import AddProduct from "./components/AddProduct";
 
 export default function App() {
+  const [Myproducts, setMyProducts] = useState([]);
+
+  const submitHandler = (product, setProduct) => {
+    const idString = Date.now().toString();
+    setMyProducts((currentMyProducts) => [
+      { key: idString, name: product },
+      ...currentMyProducts,
+    ]);
+    setProduct("");
+  };
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <AddProduct submitHandler={submitHandler} />
+      <FlatList
+        data={Myproducts}
+        renderItem={({ item }) => (
+          <Text style={styles.element}>
+            <ProductList name={item.name} />
+          </Text>
+        )}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
