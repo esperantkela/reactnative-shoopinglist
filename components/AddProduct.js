@@ -7,6 +7,11 @@ import React from "react";
 const AddProduct = ({ submitHandler }) => {
   const [product, setProduct] = useState("");
 
+  const handleClick = () => {
+    submitHandler(product);
+    setProduct("");
+  };
+
   return (
     <View>
       <View style={styles.inputContainer}>
@@ -16,10 +21,7 @@ const AddProduct = ({ submitHandler }) => {
           placeholder="Nouveau produit"
           onChangeText={(val) => setProduct(val)}
         />
-        <Button
-          title="Valider"
-          onPress={() => submitHandler(product, setProduct)}
-        />
+        <Button title="Valider" onPress={handleClick} />
       </View>
     </View>
   );

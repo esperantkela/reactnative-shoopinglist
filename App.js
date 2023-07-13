@@ -7,13 +7,12 @@ import AddProduct from "./components/AddProduct";
 export default function App() {
   const [Myproducts, setMyProducts] = useState([]);
 
-  const submitHandler = (product, setProduct) => {
+  const submitHandler = (product) => {
     const idString = Date.now().toString();
     setMyProducts((currentMyProducts) => [
       { key: idString, name: product },
       ...currentMyProducts,
     ]);
-    setProduct("");
   };
   return (
     <View style={styles.container}>
