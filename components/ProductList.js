@@ -1,12 +1,16 @@
-import { View, Text, TouchableWithoutFeedback } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
+import { styles } from "./global.style";
 import React from "react";
 
 export default function ProductList({ name }) {
   return (
-    <TouchableWithoutFeedback onPress={() => console.log("cliqué ")}>
-      <View>
-        <Text>{name}</Text>
+    <TouchableOpacity
+      onPress={() => console.log("cliqué ")}
+      activeOpacity={0.2}
+    >
+      <View style={styles.items}>
+        <Text style={styles.element}>{name}</Text>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 }

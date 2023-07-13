@@ -19,11 +19,7 @@ export default function App() {
       <AddProduct submitHandler={submitHandler} />
       <FlatList
         data={Myproducts}
-        renderItem={({ item }) => (
-          <Text style={styles.element}>
-            <ProductList name={item.name} />
-          </Text>
-        )}
+        renderItem={({ item }) => <ProductList name={item.name} />}
       />
     </View>
   );
