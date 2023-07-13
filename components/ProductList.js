@@ -1,10 +1,12 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableWithoutFeedback } from "react-native";
 import React from "react";
 
-export default function ProductList({name}) {
+export default function ProductList({ name }) {
   return (
-    <View>
-      <Text>{name}</Text>
-    </View>
+    <TouchableWithoutFeedback onPress={() => console.log("cliqué ")}>
+      <View>
+        <Text>{name}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
