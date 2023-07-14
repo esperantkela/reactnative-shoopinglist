@@ -1,16 +1,13 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, Pre, Pressable } from "react-native";
 import { styles } from "./global.style";
 import React from "react";
 
-export default function ProductList({ name }) {
+export default function ProductList({ name, deleteProduct, idString }) {
   return (
-    <TouchableOpacity
-      onPress={() => console.log("cliqué ")}
-      activeOpacity={0.2}
-    >
+    <Pressable onPress={() => deleteProduct(idString)}>
       <View style={styles.items}>
         <Text style={styles.element}>{name}</Text>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 }

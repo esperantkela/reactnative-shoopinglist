@@ -7,6 +7,12 @@ import AddProduct from "./components/AddProduct";
 export default function App() {
   const [Myproducts, setMyProducts] = useState([]);
 
+  const deleteProduct = (key) => {
+    setMyProducts((currentMyProducts) => {
+      return currentMyProducts.filter((product) => product.key != key);
+    });
+  };
+
   const submitHandler = (product) => {
     const idString = Date.now().toString();
     setMyProducts((currentMyProducts) => [
@@ -19,7 +25,13 @@ export default function App() {
       <AddProduct submitHandler={submitHandler} />
       <FlatList
         data={Myproducts}
-        renderItem={({ item }) => <ProductList name={item.name} />}
+        renderItem={({ item }) => (
+          <ProductList
+            name={item.name}
+            deleteProduct={deleteProduct}
+            idString={item.key}
+          />
+        )}
       />
     </View>
   );
