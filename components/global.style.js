@@ -26,6 +26,65 @@ const styles = StyleSheet.create({
     fontSize: 17,
     marginVertical: 6,
   },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+  },
+  modalContent: {
+    backgroundColor: "#fff",
+    width: "90%",
+    height: 250,
+    borderRadius: 15,
+    alignItems: "center",
+  },
+
+  modalHeader: {
+    width: "100%",
+    padding: 16,
+    alignItems: "center",
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: "lightgray",
+  },
+
+  modalHeaderText: {
+    color: "grey",
+    fontSize: 17,
+  },
+
+  modalBody: {
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  modalBodyText: {
+    fontSize: 17,
+  },
+
+  modalFooter: {
+    width: "100%",
+  },
+
+  PressableBtnModal: {
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    backgroundColor: "lightseagreen",
+  },
+
+  modaleBtn: {
+    color: "white",
+    fontSize: 17,
+    textAlign: "center",
+    padding: 16,
+  },
 });
 
 export { styles };
