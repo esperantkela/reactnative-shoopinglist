@@ -4,9 +4,9 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 60,
     padding: 60,
+    flex: 1,
   },
   inputContainer: {
-    flexDirection: "row",
     marginBottom: 10,
   },
   textInput: {
@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     paddingLeft: 9,
     fontSize: 18,
     flexGrow: 1,
+    marginBottom: 10,
   },
   items: {
     marginTop: 10,

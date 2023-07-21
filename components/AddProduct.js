@@ -18,6 +18,8 @@ const AddProduct = ({ submitHandler }) => {
           value={product}
           placeholder="Nouveau produit"
           onChangeText={(val) => setProduct(val)}
+          maxLength={9}
+          secureTextEntry
         />
         <Button title="Valider" onPress={handleClick} />
       </View>
