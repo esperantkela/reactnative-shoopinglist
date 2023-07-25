@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { styles } from "./components/global.style";
-import { View, FlatList, Modal, Text, Pressable, Button } from "react-native";
+import {
+  View,
+  FlatList,
+  Modal,
+  Text,
+  Pressable,
+  Button,
+  Image,
+  ImageBackground,
+} from "react-native";
 import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
 import DismissKeyBoard from "./components/DismissKeyBoard";
@@ -34,7 +43,12 @@ export default function App() {
   };
   return (
     <DismissKeyBoard>
-      <View style={styles.container}>
+      <ImageBackground
+        source={{
+          uri: "https://cdn.pixabay.com/photo/2019/09/06/22/32/pattern-4457535_640.png",
+        }}
+        style={styles.container}
+      >
         <Modal
           visible={showModal}
           animationType="slide"
@@ -47,6 +61,7 @@ export default function App() {
                 <Text style={styles.modalHeaderText}>Oups</Text>
               </View>
               <View style={styles.modalBody}>
+                <Image source={require("./assets/cross.png")} />
                 <Text style={styles.modalBodyText}>
                   Merci d'indiquer plus d'un seul caracère
                 </Text>
@@ -78,7 +93,7 @@ export default function App() {
             />
           )}
         />
-      </View>
+      </ImageBackground>
     </DismissKeyBoard>
   );
 }

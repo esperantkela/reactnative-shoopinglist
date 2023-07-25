@@ -23,7 +23,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   element: {
-    backgroundColor: "#ffb6c1",
+    backgroundColor: "green",
+    color: "#fff",
+    borderRadius: 6,
     padding: 20,
     fontSize: 17,
     marginVertical: 6,
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: "#fff",
     width: "90%",
-    height: 250,
+    height: 300,
     borderRadius: 15,
     alignItems: "center",
   },

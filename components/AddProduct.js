@@ -19,7 +19,6 @@ const AddProduct = ({ submitHandler, displayModal, cancelNewProduct }) => {
           placeholder="Nouveau produit"
           onChangeText={(val) => setProduct(val)}
           maxLength={9}
-          secureTextEntry
         />
         <View style={styles.btnContainer}>
           <View style={styles.btnBlue}>
