@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   inputContainer: {
-    marginBottom: 10,
+    justifyContent: "center",
+    padding: 24,
+    flex: 1,
   },
   textInput: {
     borderBottomColor: "grey",
@@ -15,7 +17,6 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingLeft: 9,
     fontSize: 18,
-    flexGrow: 1,
     marginBottom: 10,
   },
   items: {
@@ -85,6 +86,19 @@ const styles = StyleSheet.create({
     fontSize: 17,
     textAlign: "center",
     padding: 16,
+  },
+
+  btnContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  btnBlue: {
+    width: "45%",
+  },
+
+  btnTomato: {
+    width: "45%",
   },
 });
 
