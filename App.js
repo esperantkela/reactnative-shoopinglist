@@ -13,6 +13,7 @@ import {
 import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
 import DismissKeyBoard from "./components/DismissKeyBoard";
+import ButtonComponent from "./components/ButtonComponent";
 
 export default function App() {
   const [Myproducts, setMyProducts] = useState([]);
@@ -77,7 +78,12 @@ export default function App() {
             </View>
           </View>
         </Modal>
-        <Button title="Nouveau produit" onPress={() => setDisplayModal(true)} />
+        <ButtonComponent
+          onPressHandler={() => setDisplayModal(true)}
+          style={styles.addProductBtn}
+        >
+          Nouveau produit
+        </ButtonComponent>
         <AddProduct
           submitHandler={submitHandler}
           displayModal={displayModal}

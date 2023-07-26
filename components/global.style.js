@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   element: {
-    backgroundColor: "green",
+    backgroundColor: "mediumseagreen",
     color: "#fff",
     borderRadius: 6,
     padding: 20,
@@ -96,11 +96,23 @@ const styles = StyleSheet.create({
   },
 
   btnBlue: {
-    width: "45%",
+    width: 150,
+    borderRadius: 6,
+    backgroundColor: "seagreen",
   },
 
   btnTomato: {
-    width: "45%",
+    width: 150,
+    borderRadius: 6,
+    backgroundColor: "tomato",
+  },
+
+  addProductBtn: {
+    backgroundColor: "darkred",
+    padding: 20,
+    borderRadius: 30,
+    borderWidth: 3,
+    borderColor: "#fff",
   },
 });
 

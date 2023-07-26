@@ -1,6 +1,7 @@
 import { View, Text, TextInput, Button, Modal } from "react-native";
 import { styles } from "./global.style";
 import { useState } from "react";
+import ButtonComponent from "./ButtonComponent";
 
 const AddProduct = ({ submitHandler, displayModal, cancelNewProduct }) => {
   const [product, setProduct] = useState("");
@@ -21,12 +22,15 @@ const AddProduct = ({ submitHandler, displayModal, cancelNewProduct }) => {
           maxLength={9}
         />
         <View style={styles.btnContainer}>
-          <View style={styles.btnBlue}>
-            <Button title="Valider" onPress={handleClick} />
-          </View>
-          <View style={styles.btnTomato}>
-            <Button title="Annuler" color="tomato" onPress={cancelNewProduct} />
-          </View>
+          <ButtonComponent onPressHandler={handleClick} style={styles.btnBlue}>
+            Valider
+          </ButtonComponent>
+          <ButtonComponent
+            onPressHandler={cancelNewProduct}
+            style={styles.btnTomato}
+          >
+            Annuler
+          </ButtonComponent>
         </View>
       </View>
     </Modal>
