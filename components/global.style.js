@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 60,
     padding: 60,
     flex: 1,
   },
@@ -113,6 +112,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderWidth: 3,
     borderColor: "#fff",
+    marginBottom: 20,
+  },
+
+  bgImg: {
+    flex: 1,
   },
 });
 
