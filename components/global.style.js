@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "./../constants/colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -11,19 +12,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   textInput: {
-    borderBottomColor: "grey",
-    borderWidth: 1,
     padding: 5,
-    paddingLeft: 9,
+    textAlign: "center",
     fontSize: 18,
-    marginBottom: 10,
+    marginBottom: 15,
+    borderRadius: 30,
+    fontSize: 20,
+    height: 50,
   },
   items: {
     marginTop: 10,
   },
   element: {
     backgroundColor: "mediumseagreen",
-    color: "#fff",
+    color: Colors.white,
     borderRadius: 6,
     padding: 20,
     fontSize: 17,
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.2)",
   },
   modalContent: {
-    backgroundColor: "#fff",
+    backgroundColor: Colors.white,
     width: "90%",
     height: 300,
     borderRadius: 15,
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
   PressableBtnModal: {
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
-    backgroundColor: "lightseagreen",
+    backgroundColor: Colors.info,
   },
 
   modaleBtn: {
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 30,
     borderWidth: 3,
-    borderColor: "#fff",
+    borderColor: Colors.white,
     marginBottom: 20,
   },
 

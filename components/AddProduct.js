@@ -1,8 +1,8 @@
-import { View, Text, TextInput, Button, Modal } from "react-native";
+import { View, Modal } from "react-native";
 import { styles } from "./global.style";
 import { useState } from "react";
 import ButtonComponent from "./ButtonComponent";
-
+import Input from "./Input";
 const AddProduct = ({ submitHandler, displayModal, cancelNewProduct }) => {
   const [product, setProduct] = useState("");
 
@@ -14,12 +14,11 @@ const AddProduct = ({ submitHandler, displayModal, cancelNewProduct }) => {
   return (
     <Modal visible={displayModal} animationType="slide">
       <View style={styles.inputContainer}>
-        <TextInput
+        <Input
           style={styles.textInput}
-          value={product}
-          placeholder="Nouveau produit"
-          onChangeText={(val) => setProduct(val)}
-          maxLength={9}
+          textPlaceholder="Nouveau produit"
+          inputValue={product}
+          onChangeHandler={(val) => setProduct(val)}
         />
         <View style={styles.btnContainer}>
           <ButtonComponent onPressHandler={handleClick} style={styles.btnBlue}>
